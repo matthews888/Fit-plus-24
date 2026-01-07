@@ -3,368 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fit Plus 24 | Weight Loss for Women 30+</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>FitPlus – Weight Loss Without Diets</title>
 
     <style>
-        /* --- CSS VARIABLES & RESET --- */
         :root {
-            --primary-pink: #FF1493; /* Bright Pink */
-            --light-pink: #FFF0F5;   /* Very Light Pink for backgrounds */
-            --white: #FFFFFF;
-            --dark-grey: #333333;
-            --text-grey: #666666;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --pink: #ff5fa2;
+            --light-pink: #ffe4ef;
+            --white: #ffffff;
+            --dark: #2b2b2b;
+            --grey: #666;
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--dark-grey);
-            background-color: var(--white);
-            line-height: 1.6;
+            background: var(--light-pink);
+            color: var(--dark);
+            line-height: 1.7;
         }
 
-        /* --- UTILITIES --- */
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-pink);
-            color: var(--white);
-            padding: 15px 40px;
-            border-radius: 50px; /* Pill shape */
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 20, 147, 0.4);
+            max-width: 900px;
+            margin: auto;
+            background: var(--white);
+            padding: 60px 40px;
         }
 
         h1, h2, h3 {
-            line-height: 1.2;
-        }
-
-        /* --- HEADER --- */
-        header {
-            padding: 20px 0;
-            background-color: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-pink);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* --- HERO SECTION (USP + VISUAL) --- */
-        .hero {
-            padding: 80px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
+            color: var(--pink);
             margin-bottom: 20px;
-            color: var(--dark-grey);
         }
 
-        .hero-text span {
-            color: var(--primary-pink);
+        h1 {
+            font-size: 42px;
+            text-align: center;
         }
 
-        .hero-text p {
-            font-size: 1.1rem;
-            color: var(--text-grey);
-            margin-bottom: 30px;
-            max-width: 500px;
+        h2 {
+            font-size: 30px;
+            margin-top: 50px;
         }
 
-        .hero-visual {
-            flex: 1;
-            height: 400px;
-            background-color: var(--light-pink);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: var(--grey);
         }
 
-        /* Placeholder image style */
-        .hero-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .highlight {
+            background: var(--light-pink);
+            padding: 20px;
+            border-left: 5px solid var(--pink);
+            margin: 30px 0;
         }
 
-        /* --- BENEFITS SECTION --- */
         .benefits {
-            padding: 80px 0;
-            background-color: var(--light-pink);
-            text-align: center;
-        }
-
-        .benefits h2 {
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-        }
-
-        .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .benefit-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .icon-box {
-            font-size: 2.5rem;
-            color: var(--primary-pink);
-            margin-bottom: 20px;
-        }
-
-        .benefit-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .benefit-card p {
-            color: var(--text-grey);
-            font-size: 0.95rem;
-        }
-
-        /* --- SOCIAL PROOF --- */
-        .social-proof {
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .social-proof h2 {
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-        }
-
-        .testimonials-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .testimonial {
+        .benefit-box {
             background: var(--white);
             border: 2px solid var(--light-pink);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
-            text-align: left;
+            padding: 25px;
+            border-radius: 12px;
         }
 
-        .stars {
-            color: #FFD700; /* Gold */
-            margin-bottom: 15px;
+        .benefit-box h3 {
+            font-size: 22px;
         }
 
-        .quote {
-            font-style: italic;
-            color: var(--text-grey);
-            margin-bottom: 20px;
-        }
-
-        .author {
-            font-weight: 700;
-            color: var(--dark-grey);
-        }
-
-        /* --- FINAL CTA / CONVERSION --- */
-        .cta-section {
-            background-color: var(--primary-pink);
+        .cta {
+            background: var(--pink);
             color: var(--white);
-            padding: 80px 0;
+            padding: 40px;
             text-align: center;
+            border-radius: 16px;
+            margin-top: 60px;
         }
 
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+        .cta h2 {
+            color: var(--white);
         }
 
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
+        .cta p {
+            color: #ffeef6;
         }
 
-        .cta-section .btn {
-            background-color: var(--white);
-            color: var(--primary-pink);
-        }
-        
-        .cta-section .btn:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        /* --- FOOTER --- */
-        footer {
+        .footer {
             text-align: center;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: var(--text-grey);
+            margin-top: 60px;
+            font-size: 14px;
+            color: #999;
         }
 
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.2rem;
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 20px;
             }
 
-            .hero-visual {
-                width: 100%;
-                height: 300px;
+            h1 {
+                font-size: 32px;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">Fit Plus 24</div>
+<div class="container">
+
+    <h1>Your Body. Your Goals. Your Journey.</h1>
+
+    <div class="highlight">
+        <p>
+            This is not another diet.<br>
+            This is not about willpower.<br>
+            And it definitely doesn’t require you to feel hungry.
+        </p>
+    </div>
+
+    <h2>Why Most Weight Loss Fails</h2>
+    <p>
+        Diets fail because they fight your biology.
+        They increase hunger, slow your metabolism, and rely on restriction.
+    </p>
+    <p>
+        FitPlus was built for women who are done starting over.
+    </p>
+
+    <h2>What Makes FitPlus Different</h2>
+
+    <div class="benefits">
+        <div class="benefit-box">
+            <h3>No Diets Required</h3>
+            <p>
+                You don’t cut food groups, count calories, or follow rigid meal plans.
+                You work with your body — not against it.
+            </p>
         </div>
-    </header>
 
-    <section class="hero container">
-        <div class="hero-text">
-            <h1>Weight Loss Designed for <br><span>Women Over 30</span></h1>
-            <p>Stop starving yourself. Reset your metabolism without restrictive diets or constant hunger. The Fit Plus 24 method works with your body, not against it.</p>
-            <a href="#buy-now" class="btn">Get The Ebook Guide</a>
+        <div class="benefit-box">
+            <h3>No More Hunger</h3>
+            <p>
+                Learn how to naturally reduce hunger so weight loss feels easier —
+                not harder.
+            </p>
         </div>
-        <div class="hero-visual">
-            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop" alt="Happy woman 30+ fit and healthy">
+
+        <div class="benefit-box">
+            <h3>Sustainable Fat Loss</h3>
+            <p>
+                This is about results you can maintain without burnout or rebound weight gain.
+            </p>
         </div>
-    </section>
+    </div>
 
-    <section class="benefits">
-        <div class="container">
-            <h2>Why Fit Plus 24 is Different</h2>
-            <div class="benefits-grid">
-                
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-ban"></i> </div>
-                    <h3>No Crash Diets</h3>
-                    <p>Forget 1200 calorie restrictions. Learn how to eat real food that fuels your busy life while shedding fat naturally.</p>
-                </div>
+    <h2>Who This Ebook Is For</h2>
+    <p>
+        ✔ Women over 35  
+        ✔ Women tired of dieting  
+        ✔ Women who want control without restriction  
+    </p>
 
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-utensils"></i> </div>
-                    <h3>Zero Hunger Pangs</h3>
-                    <p>Our unique nutrient timing approach keeps you full and satisfied. Say goodbye to the 3 PM sugar cravings.</p>
-                </div>
+    <h2>What You’ll Learn</h2>
+    <p>
+        • Why hunger isn’t your fault  
+        • How to eat without obsession  
+        • How to lose weight without giving up foods you love  
+        • How to stop the cycle of starting over  
+    </p>
 
-                <div class="benefit-card">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-person-dress"></i> </div>
-                    <h3>Hormone Harmony</h3>
-                    <p>Specifically tailored for women 30+, addressing the metabolic shifts that happen as we age.</p>
-                </div>
+    <div class="cta">
+        <h2>You Don’t Need Another Diet</h2>
+        <p>
+            You need a system that works with your body —
+            and finally makes weight loss feel calm and achievable.
+        </p>
+    </div>
 
-            </div>
-        </div>
-    </section>
+    <div class="footer">
+        © FitPlus 2026 — All Rights Reserved
+    </div>
 
-    <section class="social-proof container">
-        <h2>Join 5,000+ Women</h2>
-        <div class="testimonials-wrapper">
-            
-            <div class="testimonial">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="quote">"I tried everything in my 20s, but after 30 nothing worked. Fit Plus 24 changed the game. I eat more now than I did before and the weight is finally coming off!"</p>
-                <p class="author">- Sarah M., Age 34</p>
-            </div>
-
-            <div class="testimonial">
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p class="quote">"Finally, a guide that understands I don't have time to spend 3 hours in the gym or prep complicated meals. Simple, effective, and zero hunger."</p>
-                <p class="author">- Jessica R., Age 41</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="buy-now" class="cta-section">
-        <div class="container">
-            <h2>Start Your Transformation Today</h2>
-            <p>Instant digital download. 60-Day Money Back Guarantee.</p>
-            <a href="#" class="btn">Download Fit Plus 24 ($27)</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Fit Plus 24. All rights reserved.</p>
-    </footer>
+</div>
 
 </body>
 </html>
-
